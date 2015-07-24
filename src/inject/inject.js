@@ -63,9 +63,4 @@ $(document).ready(function() {
 	        }
 	    }
 	}
-
-	window.addEventListener("beforeunload", function(e){
-	   // Do something
-	   //sense.Close();
-	}, false);
 });
