@@ -22,16 +22,13 @@
     "default_popup": "src/browser_action/browser_action.html"
   },
   "permissions": [
-    "https://*/*",
-    "http://*/*",
+    "https://instagram.com/*",
     "tabs"
   ],
   "content_scripts": [
     {
       "matches": [
-        "http://www.google.com/*",
-        "https://*/*",
-        "http://*/*"
+        "https://instagram.com/*"
       ],
       "js": [
         "js/jquery-1.11.0.min.js",
@@ -39,7 +36,8 @@
         "js/realsense.js",
         "js/realsenseinfo.js",
         "js/jquery.scrollTo.js",
-        "src/inject/inject.js"
+        "src/inject/inject.js",
+        "src/inject/api.js"
       ]
     }
   ]
