@@ -1513,7 +1513,7 @@ function RealSenseConnection() {
     this.request_id = 0;    // Increment on every message
     this.callbacks = {};    // Callbacks from server
     this.binary_data = null;// Data received in last binary message
-    this.stopped = false; 
+    this.stopped = false;
 
     this.call = function (instance, method, params, timeout) {
         params = params || {};      // Empty params by default

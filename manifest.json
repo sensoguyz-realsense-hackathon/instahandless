@@ -9,26 +9,18 @@
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
   },
-  "default_locale": "en",
-  "background": {
-    "scripts": [
-      "src/bg/background.js"
-    ],
-    "persistent": true
-  },
   "browser_action": {
-    "default_icon": "icons/icon19.png",
-    "default_title": "browser action demo",
-    "default_popup": "src/bg/imports.html"
+    "default_icon": "icons/icon48.png",
+    "default_title": "browser action demo"
   },
   "permissions": [
-    "https://instagram.com/*",
+    "http://vk.com/*",
     "tabs"
   ],
   "content_scripts": [
     {
       "matches": [
-        "https://instagram.com/*"
+        "http://vk.com/*"
       ],
       "js": [
         "js/jquery-1.11.0.min.js",
