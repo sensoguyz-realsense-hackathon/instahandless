@@ -49,8 +49,8 @@ $(document).ready(function() {
 		var allowedGestures = [
 				"thumb_up",
 				"thumb_down",
-				"swipe_down",
-				"swipe_up"
+				//"swipe_down",
+				//"swipe_up"
 		];
 
 		for (g = 0; g < data.gestures.length; g++) {
@@ -71,22 +71,13 @@ $(document).ready(function() {
 
 
 			switch(data.gestures[g].name) {
-	            case 'swipe_up':
-	                setStatus('up');
-					api.nextPost();
-					break;
 				case 'thumb_up':
 					setStatus("like");
-					api.likeCurrentPost();
+					api.scrollUp();
 					break;
 				case 'thumb_down':
 					setStatus("dislike");
-					api.dislikeCurrentPost();
-					break;
-				case 'swipe_down':
-					setStatus('down');
-	                //$(window).scrollTo('+=300px', 500, 'y');
-					api.prevPost();
+					api.scrollDown();
 					break;
 	            case 'swipe_left':
 					setStatus('left');
@@ -99,12 +90,6 @@ $(document).ready(function() {
 				case 'tap':
 					setStatus('tap');
 					api.openProfile();
-					break;
-				case 'full_pinch':
-				case 'fist':
-					setStatus('fist');
-	            default:
-	                break;
 	        }
 
 		}

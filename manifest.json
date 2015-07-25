@@ -1,26 +1,25 @@
 {
-  "name": "CHANGE THIS : Extension boilerplate",
+  "name": "HABRAHABR Real Sense",
   "version": "0.0.1",
   "manifest_version": 2,
-  "description": "This extension was created with the awesome 4brains",
-  "homepage_url": "http://vk.com",
+  "description": "Habrahabr.ru Real Sense chrome extension",
   "icons": {
-    "16": "icons/icon16.png",
-    "48": "icons/icon48.png",
-    "128": "icons/icon128.png"
+    "16": "icons/icon.png",
+    "48": "icons/icon.png",
+    "128": "icons/icon.png"
   },
   "browser_action": {
-    "default_icon": "icons/icon48.png",
+    "default_icon": "icons/icon.png",
     "default_title": "browser action demo"
   },
   "permissions": [
-    "http://vk.com/*",
+    "http://habrahabr.ru/*",
     "tabs"
   ],
   "content_scripts": [
     {
       "matches": [
-        "http://vk.com/*"
+        "http://habrahabr.ru/"
       ],
       "js": [
         "js/jquery-1.11.0.min.js",
@@ -28,8 +27,22 @@
         "js/realsense.js",
         "js/realsenseinfo.js",
         "js/jquery.scrollTo.js",
-        "src/inject/inject.js",
-        "src/inject/api.js"
+        "src/inject/1/inject.js",
+        "src/inject/1/api.js"
+      ]
+    },
+    {
+      "matches": [
+        "http://habrahabr.ru/post/*"
+      ],
+      "js": [
+        "js/jquery-1.11.0.min.js",
+        "js/promise-1.0.0.min.js",
+        "js/realsense.js",
+        "js/realsenseinfo.js",
+        "js/jquery.scrollTo.js",
+        "src/inject/2/inject.js",
+        "src/inject/2/api.js"
       ]
     }
   ]
