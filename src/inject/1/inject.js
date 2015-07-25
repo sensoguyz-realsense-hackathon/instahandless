@@ -100,10 +100,8 @@ $(document).ready(function() {
 					setStatus('tap');
 					api.openProfile();
 					break;
-				case 'full_pinch':
-                    setStatus('full_pinch');
-				case 'fist':
-					setStatus('fist');
+				case 'spreadfingers':
+                    setStatus('ready');
 	            default:
 	                break;
 	        }
